@@ -27,6 +27,8 @@
         {% if x == 1 %}
             <P>Generated Nucleotide sequence is :</P>
             <h3 class="text-break" id="myInput">{{ seq }}</h3>
+            <P>Generated reversed compliement sequence is :</P>
+            <h3 class="text-break" id="myInput">{{ rev_seq }}</h3>
             <button class="btn mt-2" data-clipboard-target="#myInput">Copy Sequence</button>
         {% endif %}
 
