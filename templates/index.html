@@ -27,9 +27,11 @@
         {% if x == 1 %}
             <P>Generated Random Nucleotide sequence is :</P>
             <h3 class="text-break" id="myInput">{{ seq }}</h3>
+            <button class="btn m-2 mb-3" data-clipboard-target="#myInput">Copy Sequence</button>
             <P>Generated Random Reversed compliement sequence is :</P>
-            <h3 class="text-break" id="myInput">{{ rev_seq }}</h3>
-            <button class="btn mt-2" data-clipboard-target="#myInput">Copy Sequence</button>
+            <h3 class="text-break" id="myInput1">{{ rev_seq }}</h3>
+            <button class="btn m-2" data-clipboard-target="#myInput1">Copy Reversed Sequence</button>
+            
         {% endif %}
 
         
