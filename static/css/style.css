@@ -55,6 +55,10 @@ input[type=submit]:hover {
     color : #ffba08;
     background-color: #343a40 ;
 }
+.error{
+    color: red;
+}
+
 
 /* .navbar {
   padding: 15px 10px;
