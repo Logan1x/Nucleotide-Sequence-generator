@@ -1,51 +1,60 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel='stylesheet' href="{{ url_for('static', filename='css/style.css') }}" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/style.css') }}">
     <title>Nucleotide Generator</title>
-  </head>
-  <body>
-      <div class="container text-center mt-5">
-        <h1>Nucleotide Sequence Generator</h1>
-        <!-- <input type="number" id="count"> -->
-        <form method="POST">
-            <div class="row">
-                <div class="col">
-                    <label for="fname">Enter length of nucleotides below</label>
-                    <input class="form-control form-control-lg" type="number" name="len" placeholder="Enter length of nucleotides" required>
-                </div>
-                
-            </div>
-            <button class="btn mb-4" type="submit">Submit</button>
-        </form>
-        {% if x == 1 %}
-            <P>Generated Random Nucleotide sequence is :</P>
-            <h3 class="text-break" id="myInput">{{ seq }}</h3>
-            <button class="btn m-2 mb-3" data-clipboard-target="#myInput">Copy Sequence</button>
-            <P>Generated Random Reversed compliement sequence is :</P>
-            <h3 class="text-break" id="myInput1">{{ rev_seq }}</h3>
-            <button class="btn m-2" data-clipboard-target="#myInput1">Copy Reversed Sequence</button>
-            
-        {% endif %}
+</head>
+<body>
+<div class="container text-center mt-5">
+    <h1>Nucleotide Sequence Generator</h1>
+    <!-- <input type="number" id="count"> -->
+    <form method="POST">
+        <div class="row">
+            <div class="col">
+                <label for="fname">Enter length of nucleotides below</label>
+                {% if error %}
+                    <p class="error"> {{ error }}</p>
+                {% endif %}
+                <input class="form-control form-control-lg" type="number" min="1" name="len"
+                       placeholder="Enter length of nucleotides" required></div>
 
-        
-        
-      </div>
+        </div>
+        <button class="btn mb-4" type="submit">Submit</button>
+    </form>
+    {% if x == 1 %}
+        <P>Generated Random Nucleotide sequence is :</P>
+        <h3 class="text-break" id="myInput">{{ seq }}</h3>
+        <button class="btn m-2 mb-3" data-clipboard-target="#myInput">Copy Sequence</button>
+        <P>Generated Random Reversed compliement sequence is :</P>
+        <h3 class="text-break" id="myInput1">{{ rev_seq }}</h3>
+        <button class="btn m-2" data-clipboard-target="#myInput1">Copy Reversed Sequence</button>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
-        <script type="text/javascript">
-            new ClipboardJS('.btn');
-        </script>
+    {% endif %}
+
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script type="text/javascript">
+    new ClipboardJS('.btn');
+</script>
 </body>
 </html>
