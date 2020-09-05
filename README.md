@@ -11,3 +11,11 @@ This project is made out of flask and **if you love to contribute please make a 
 <p align="center">
         <img src="https://i.imgur.com/M8rcczr.png" title="Nucleotide seq generator">
 </p>
+
+### This Project was made with help of these contributors
+
+<p align="center">
+        <a href="https://github.com/logan1x/Nucleotide-Sequence-generator/graphs/contributors">
+                <img src="https://contributors-img.web.app/image?repo=logan1x/Nucleotide-Sequence-generator" />
+        </a>
+</p>
