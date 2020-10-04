@@ -61,8 +61,8 @@ input[type=submit]:hover {
 
 /*Footer*/
 .footer{
-  background:#303036;
-  color: white;
+  background: black;
+  color:yellow;
   height: 100%;
   position: relative;
   
