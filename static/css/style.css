@@ -59,6 +59,20 @@ input[type=submit]:hover {
     color: red;
 }
 
+/*Footer*/
+.footer{
+  background:#303036;
+  color: white;
+  height: 100%;
+  position: relative;
+  
+}
+
+
+
+
+
+
 
 /* .navbar {
   padding: 15px 10px;
