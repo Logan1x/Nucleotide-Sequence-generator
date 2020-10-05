@@ -1,118 +1,87 @@
 <!DOCTYPE html>
 <html lang='en'>
-
-<head>
-    <meta class="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Page Not Found</title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16x16.png">
-    <link rel="manifest" href="static/images/site.webmanifest">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <style>
-        body {
-            background-color: #ffba08;
-        }
-        
-        .page-wrap {
-            min-height: 100vh;
-        }
-        
-        .display-4 {
-            color: #000;
-        }
-        
-        .abc {
-            color: #000;
-            text-decoration: underline;
-            text-decoration-color: #000;
-        }
-
-        .abc:hover{
-            color: #fff;
-        }
-
-        p {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.1em;
-            font-weight: 300;
-            line-height: 1.7em;
-            color: #999;
-        }
-        
-        a,
-        a:hover,
-        a:focus {
-            color: inherit;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .navbar {
-            background : #000;
-            border: none;
-            border-radius: 0;
-            margin-bottom: 2px;
-            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-            color : #ffba08;
-        }
-        
-        .navbar-btn {
-            box-shadow: none;
-            outline: none !important;
-            border: none;
-        }
-
-        #content {
-            width: 100%;
-            padding: 40px;
-            min-height: 100vh;
-            transition: all 0.3s;
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-        
-        #content.active {
-            width: 100%;
-        }
-    </style>
-</head>
-
-
-<body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="nav-link" id="companylogo" href="#">Logo</a>
-            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-align-justify"></i>
+   <head>
+      <meta class="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <title>Page Not Found</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16x16.png">
+      <link rel="manifest" href="static/images/site.webmanifest">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      <style>
+         body {
+         background-color: #ffba08;
+         }
+         .page-wrap {
+         min-height: 100vh;
+         }
+         .display-4 {
+         color: #000;
+         }
+         .abc {
+         color: #000;
+         text-decoration: underline;
+         text-decoration-color: #000;
+         }
+         .abc:hover{
+         color: #fff;
+         }
+         p {
+         font-family: 'Poppins', sans-serif;
+         font-size: 1.1em;
+         font-weight: 300;
+         line-height: 1.7em;
+         color: #999;
+         }
+         a,
+         a:hover,
+         a:focus {
+         color: inherit;
+         text-decoration: none;
+         transition: all 0.3s;
+         }
+         #content {
+         width: 100%;
+         padding: 40px;
+         min-height: 100vh;
+         transition: all 0.3s;
+         position: absolute;
+         top: 0;
+         right: 0;
+         }
+         #content.active {
+         width: 100%;
+         }
+      </style>
+   </head>
+   <body>
+      <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+         <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" id="homename" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="blogname" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="docsname" href="#">Docs</a>
-                    </li>
-                </ul>
+            <a class="navbar-brand mr-auto" id="companylogo" href="#" style="color: #ffba08;">&nbsp LOGO</a>
+            <div class="collapse navbar-collapse" id="Navbar">
+               <ul class="navbar-nav">
+                  <li class="nav-item mr-auto"><a href="#" id="homename" class="nav-link" style="color: #ffba08;"></span>&nbsp Home</a></li>
+                  <li class="nav-item active mr-auto"><a href="#" id="blogname" class="nav-link" style="color: #ffba08;">&nbsp Blogs</a></li>
+                  <li class="nav-item mr-auto"><a href="#" id="docsname" class="nav-link" style="color: #ffba08;">&nbsp Docs</a></li>
+               </ul>
             </div>
-        </div>
-    </nav>
-    <div class="page-wrap d-flex flex-row align-items-center">
-        <div class="container">
+         </div>
+      </nav>
+      <div class="page-wrap d-flex flex-row align-items-center">
+         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-12 text-center">
-                    <span class="display-4 d-block">Go <a href="/" class="abc">Home</a>, You are drunk.</span>
-                </div>
+               <div class="col-md-12 text-center">
+                  <span class="display-4 d-block">Go <a href="/" class="abc">Home</a>, You are drunk.</span>
+               </div>
             </div>
-        </div>
-    </div>
-</body>
+         </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   </body>
