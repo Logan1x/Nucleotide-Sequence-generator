@@ -63,10 +63,11 @@ input[type=submit]:hover {
 .footer{
   background: black;
   color:#ffba08;
-  height: 100%;
+  height: 150px;
   position: relative;
   
 }
+
 
 
 
