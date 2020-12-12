@@ -17,7 +17,7 @@ def hello1():
         return render_template("index.html", error="Number has to be greater than 0")
 
     if int(request.form['len']) > 1000000:
-        return render_template("index.html", error="Number has to be less than 1 million")
+        return render_template("index.html", error="Number has to be less than 1,000,000")
      
     len = request.form['len']
     seq = ''.join([random.choice(nucleotide)
