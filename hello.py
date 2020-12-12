@@ -14,10 +14,10 @@ def hello():
 @app.route('/', methods=['POST'])
 def hello1():
     if int(request.form['len']) < 1:
-        return render_template("index.html", error="Number has to be greater then 0")
+        return render_template("index.html", error="Number has to be greater than 0")
 
     if int(request.form['len']) > 1000000:
-        return render_template("index.html", error="Number has to be less then 1 million")
+        return render_template("index.html", error="Number has to be less than 1 million")
      
     len = request.form['len']
     seq = ''.join([random.choice(nucleotide)
